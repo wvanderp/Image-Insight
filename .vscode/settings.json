@@ -1,0 +1,12 @@
+{
+    "cSpell.words": [
+        "exifread"
+    ],
+    "cSpell.language": "en-GB",
+    "editor.formatOnSave": true,
+    "github.copilot.chat.codeGeneration.instructions": [
+        {
+            "file": "Manifesto.md"
+        }
+    ]
+}
