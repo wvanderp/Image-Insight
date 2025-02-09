@@ -1,21 +1,31 @@
-FROM python:3.11-slim
+# This docker file can be called like this:
+# docker run -v /path/to/images:/images [image-name] photo.jpg
+# this will then output a JSON Object to stdout
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    tesseract-ocr \
-    libgl1-mesa-glx \
-    libglib2.0-0 \
-    && rm -rf /var/lib/apt/lists/*
+FROM ubuntu:latest
+
+# Install base dependencies
+RUN apt-get update && \
+    apt-get install -y nodejs npm python3 python3-venv && \
+    python3 -m venv /opt/venv && \
+    /opt/venv/bin/pip install pillow
 
 # Set working directory
 WORKDIR /app
 
-# Copy requirements and install Python dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy package.json and install dependencies
+COPY package.json .
+RUN npm install
 
 # Copy application code
 COPY . .
 
+# Compile TypeScript code
+RUN npx tsc
+
+# Install tool-specific dependencies
+RUN apt-get install -y exiftool
+
 # Set the entrypoint
-ENTRYPOINT ["python", "image_analyzer.py"] 
+ENV PATH="/opt/venv/bin:$PATH"
+ENTRYPOINT ["node", "dist/main.js"]

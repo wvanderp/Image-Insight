@@ -1,0 +1,16 @@
+{
+  "name": "image-insight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "build-docker": "docker build -t image-insight .",
+    "run-docker": "docker run --rm -v C:\\Users\\woute\\Code\\Image-Insight:/images image-insight Zendaya.jpg"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^22.13.1",
+    "typescript": "^5.7.3"
+  }
+}

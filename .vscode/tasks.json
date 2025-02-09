@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build-docker",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build-docker",
+			"detail": "docker build -t image-insight ."
+		},
+		{
+			"type": "npm",
+			"script": "run-docker",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: run-docker",
+			"detail": "docker run -p 3000:3000 image-insight"
+		}
+	]
+}
