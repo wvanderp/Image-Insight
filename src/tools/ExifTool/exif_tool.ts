@@ -11,11 +11,11 @@ interface ExifData {
 }
 
 class ExifTool extends BaseTool {
-    version: string;
+    static version: string = '1.0.0';
+    static toolName: string = 'ExifTool';
 
     constructor() {
         super();
-        this.version = '1.0.0';
     }
 
     runTool(imagePath: PathLike): ExifData | null {

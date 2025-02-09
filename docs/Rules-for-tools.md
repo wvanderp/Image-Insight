@@ -113,6 +113,9 @@ Create a JSON schema file for your tool's output:
 
 You need to provide sample images and the expected output.
 
+All test images should have an appropriate license. If you do not have the right to use the image, you should not include it in the repository.
+The licensence, source and attribution of the images should be included in a text file with the same name as the image next to the image.
+
 ### Example
 
 Include a `tests` directory with sample images and a JSON file with expected outputs:
@@ -165,4 +168,6 @@ tool_name/
       ├── sample1_expected_output.json
       ├── sample2.png
       └── sample2_expected_output.json
+```
 
+The name of the tool folder should be the name of the tool. it should exactly match the name in the Class of the tool.

@@ -10,21 +10,26 @@ RUN apt-get update && \
     python3 -m venv /opt/venv && \
     /opt/venv/bin/pip install pillow
 
+# Install tool-specific dependencies
+# ExifTool
+RUN apt-get install -y exiftool
+
 # Set working directory
 WORKDIR /app
 
 # Copy package.json and install dependencies
-COPY package.json .
+COPY package.json ./
+COPY package-lock.json ./
+COPY tsconfig.json ./
 RUN npm install
 
 # Copy application code
-COPY . .
+COPY src ./src
 
 # Compile TypeScript code
 RUN npx tsc
 
-# Install tool-specific dependencies
-RUN apt-get install -y exiftool
+
 
 # Set the entrypoint
 ENV PATH="/opt/venv/bin:$PATH"

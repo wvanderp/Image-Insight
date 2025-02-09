@@ -1,8 +1,8 @@
 abstract class BaseTool {
-    version: string;
+    static version: string = '1.0.0';
+    static toolName: string = 'BaseTool';
 
     constructor() {
-        this.version = '1.0.0';
     }
 
     abstract runTool(imagePath: string): any;

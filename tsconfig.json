@@ -10,7 +10,8 @@
         "forceConsistentCasingInFileNames": true
     },
     "include": [
-        "src"
+        "src",
+        "tests/image_inspector.test.ts"
     ],
     "exclude": [
         "node_modules"
