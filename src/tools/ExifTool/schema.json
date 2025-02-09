@@ -1,118 +1,133 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "type": "object",
     "properties": {
-        "FileName": {
-            "type": "string",
-            "description": "The name of the image file"
-        },
-        "FileSize": {
-            "type": "integer",
-            "description": "The size of the image file in bytes"
-        },
-        "Make": {
-            "type": "string",
-            "description": "The manufacturer of the camera"
-        },
-        "Model": {
-            "type": "string",
-            "description": "The model of the camera"
-        },
-        "FileType": {
-            "type": "string",
-            "description": "The type of the file"
-        },
-        "MIMEType": {
-            "type": "string",
-            "description": "The MIME type of the file"
-        },
-        "ImageWidth": {
-            "type": "integer",
-            "description": "The width of the image in pixels"
-        },
-        "ImageHeight": {
-            "type": "integer",
-            "description": "The height of the image in pixels"
-        },
-        "DateTimeOriginal": {
-            "type": "string",
-            "description": "The original date and time when the image was created"
-        },
-        "ExposureTime": {
-            "type": "string",
-            "description": "The exposure time of the image"
-        },
-        "FNumber": {
-            "type": "number",
-            "description": "The F-number (aperture) of the image"
-        },
-        "ISO": {
-            "type": "integer",
-            "description": "The ISO speed of the image"
-        },
-        "FocalLength": {
-            "type": "string",
-            "description": "The focal length of the lens"
-        },
-        "Orientation": {
-            "type": "string",
-            "description": "The orientation of the image"
-        },
-        "Software": {
-            "type": "string",
-            "description": "The software used to process the image"
-        },
-        "Artist": {
-            "type": "string",
-            "description": "The artist of the image"
-        },
-        "Copyright": {
-            "type": "string",
-            "description": "The copyright information of the image"
-        },
-        "ExposureProgram": {
-            "type": "string",
-            "description": "The exposure program used"
-        },
-        "DateTimeCreated": {
-            "type": "string",
-            "description": "The date and time when the image was created"
-        },
-        "Lens": {
-            "type": "string",
-            "description": "The lens used to capture the image"
-        },
-        "ImageSize": {
-            "type": "string",
-            "description": "The size of the image"
-        },
-        "Megapixels": {
-            "type": "number",
-            "description": "The megapixels of the image"
+        "ExifTool": {
+            "additionalProperties": false,
+            "description": "Root object containing all EXIF metadata",
+            "properties": {
+                "Artist": {
+                    "description": "Name of the image creator",
+                    "type": "string"
+                },
+                "Copyright": {
+                    "description": "Copyright information",
+                    "type": "string"
+                },
+                "CreateDate": {
+                    "description": "Date and time when the image was created",
+                    "type": "string"
+                },
+                "DateTimeOriginal": {
+                    "description": "Original date and time when the image was taken",
+                    "type": "string"
+                },
+                "Directory": {
+                    "description": "Directory containing the image file",
+                    "type": "string"
+                },
+                "ExifToolVersion": {
+                    "description": "Version of ExifTool used to extract the metadata",
+                    "type": "string"
+                },
+                "ExposureTime": {
+                    "description": "Exposure time (e.g., '1/10')",
+                    "type": "string"
+                },
+                "FileAccessDate": {
+                    "description": "Date the file was last accessed",
+                    "type": "string"
+                },
+                "FileInodeChangeDate": {
+                    "description": "Date the file's inode was last changed",
+                    "type": "string"
+                },
+                "FileName": {
+                    "description": "Name of the image file",
+                    "type": "string"
+                },
+                "FileSize": {
+                    "description": "Size of the file with unit (e.g., '5.0 MB')",
+                    "type": "string"
+                },
+                "FileType": {
+                    "description": "Type of image file (e.g., 'JPEG')",
+                    "type": "string"
+                },
+                "FileTypeExtension": {
+                    "description": "File extension (e.g., 'jpg')",
+                    "type": "string"
+                },
+                "FNumber": {
+                    "description": "F-number (aperture)",
+                    "type": "number"
+                },
+                "FocalLength": {
+                    "description": "Focal length of the lens",
+                    "type": "string"
+                },
+                "ImageHeight": {
+                    "description": "Height of the image in pixels",
+                    "type": "number"
+                },
+                "ImageSize": {
+                    "description": "Dimensions of the image (e.g., '5568x3712')",
+                    "type": "string"
+                },
+                "ImageWidth": {
+                    "description": "Width of the image in pixels",
+                    "type": "number"
+                },
+                "ISO": {
+                    "description": "ISO speed rating",
+                    "type": "number"
+                },
+                "LensModel": {
+                    "description": "Model of the lens used",
+                    "type": "string"
+                },
+                "Make": {
+                    "description": "Camera manufacturer",
+                    "type": "string"
+                },
+                "Megapixels": {
+                    "description": "Size of the image in megapixels",
+                    "type": "number"
+                },
+                "MIMEType": {
+                    "description": "MIME type of the file",
+                    "type": "string"
+                },
+                "Model": {
+                    "description": "Camera model",
+                    "type": "string"
+                },
+                "ModifyDate": {
+                    "description": "Date the file was last modified",
+                    "type": "string"
+                },
+                "Software": {
+                    "description": "Software used to process the image",
+                    "type": "string"
+                },
+                "SourceFile": {
+                    "description": "Path to the source image file",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "FileName",
+                "FileType",
+                "MIMEType",
+                "ImageWidth",
+                "ImageHeight",
+                "ImageSize",
+                "Megapixels"
+            ],
+            "type": "object"
         }
     },
     "required": [
-        "FileName",
-        "FileSize",
-        "Make",
-        "Model",
-        "FileType",
-        "MIMEType",
-        "ImageWidth",
-        "ImageHeight",
-        "DateTimeOriginal",
-        "ExposureTime",
-        "FNumber",
-        "ISO",
-        "FocalLength",
-        "Orientation",
-        "Software",
-        "Artist",
-        "Copyright",
-        "ExposureProgram",
-        "DateTimeCreated",
-        "Lens",
-        "ImageSize",
-        "Megapixels"
-    ]
+        "ExifTool"
+    ],
+    "type": "object"
 }
