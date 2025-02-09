@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "barcodes": {
+            "type": "array",
+            "description": "Array of detected barcodes in the image",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "type": "string",
+                        "description": "The decoded barcode data"
+                    },
+                    "type": {
+                        "type": "string",
+                        "description": "The type of barcode detected",
+                        "enum": [
+                            "EAN-13",
+                            "EAN-8",
+                            "EAN-2",
+                            "EAN-5",
+                            "UPC-A",
+                            "UPC-E",
+                            "CODE-128",
+                            "CODE-39",
+                            "CODE-93",
+                            "CODABAR",
+                            "I25",
+                            "DATABAR",
+                            "DATABAR-EXP",
+                            "QR",
+                            "SQCODE",
+                            "UNKNOWN"
+                        ]
+                    }
+                },
+                "required": [
+                    "data",
+                    "type"
+                ]
+            }
+        },
+        "count": {
+            "type": "integer",
+            "description": "Total number of barcodes detected in the image",
+            "minimum": 0
+        }
+    },
+    "required": [
+        "barcodes",
+        "count"
+    ]
+}

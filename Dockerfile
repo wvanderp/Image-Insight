@@ -14,6 +14,9 @@ RUN apt-get update && \
 # ExifTool
 RUN apt-get install -y exiftool
 
+# ZBar
+RUN apt-get install -y zbar-tools
+
 # Set working directory
 WORKDIR /app
 
@@ -28,8 +31,6 @@ COPY src ./src
 
 # Compile TypeScript code
 RUN npx tsc
-
-
 
 # Set the entrypoint
 ENV PATH="/opt/venv/bin:$PATH"

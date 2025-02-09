@@ -38,11 +38,13 @@ describe('Image Inspector', () => {
             const schema = loadSchema(toolClass.name);
             const validate = ajv.compile(schema);
 
-            const testImages = fs.readdirSync(toolTestPath).filter(file => file.endsWith('.jpg'));
+            const testImages = fs.readdirSync(toolTestPath).filter(file => !file.endsWith('.json') && !file.endsWith('.txt'));
+
+            console.log(testImages)
 
             testImages.forEach(image => {
                 const imagePath = path.join(toolTestPath, image);
-                const expectedOutputPath = imagePath.replace('.jpg', '.json');
+                const expectedOutputPath = imagePath.split('.').slice(0, -1).join('.') + '.json';
 
                 it(`should validate the output against the schema for ${image}`, { timeout: 30000 }, async () => {
                     const expectedOutput = JSON.parse(fs.readFileSync(expectedOutputPath, 'utf-8'));
@@ -69,6 +71,8 @@ describe('Image Inspector', () => {
 
                             const output = JSON.parse(stdout);
                             const expectedOutput = JSON.parse(fs.readFileSync(expectedOutputPath, 'utf-8'));
+
+                            fs.writeFileSync(expectedOutputPath, JSON.stringify(expectedOutput, null, 2));
 
                             // Remove FileInodeChangeDate from both objects before comparison
                             const cleanOutput = removeFileInodeChangeDate(output);

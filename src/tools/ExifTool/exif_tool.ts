@@ -13,6 +13,7 @@ interface ExifData {
 class ExifTool extends BaseTool {
     static version: string = '1.0.0';
     static toolName: string = 'ExifTool';
+    static description: string = 'Tool to extract EXIF data from images using ExifTool';
 
     constructor() {
         super();
