@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
-        "exifread"
+        "exifread",
+        "zbarimg"
     ],
     "cSpell.language": "en-GB",
     "editor.formatOnSave": true,

@@ -23,7 +23,7 @@ exec('python your_tool.py path/to/image.jpg', (error, stdout, stderr) => {
     console.error(`Stderr: ${stderr}`);
     return;
   }
-  console.log(`Output: ${stdout}`);
+  console.log(stdout);
 });
 ```
 

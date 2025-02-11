@@ -5,16 +5,18 @@
   "main": "dist/main.js",
   "scripts": {
     "build-docker": "docker build -t image-insight .",
-    "run-docker": "docker run --rm -v C:\\Users\\woute\\Code\\Image-Insight:/images image-insight Zendaya.jpg",
+    "run": "npm run build-docker && docker run --rm -v /home/walter/code/Image-Insight/src/tools/ZBarTool/tests/:/images/ image-insight QR_code_for_mobile_English_Wikipedia.svg.png",
     "test": "npm run build-docker && vitest run"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^22.13.1",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
+    "@types/xml2js": "^0.4.14",
     "ajv": "^8.17.1",
     "vitest": "^3.0.5"
   }

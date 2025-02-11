@@ -5,10 +5,10 @@
     "FileName": "temp_image.jpg",
     "Directory": "/app/dist",
     "FileSize": "5.0 MB",
-    "FileAccessDate": "2025:02:09 21:43:51+00:00",
-    "FileInodeChangeDate": "2025:02:09 22:04:22+00:00",
-    "FileModifyDate": "2025:02:09 20:20:39+00:00",
-    "FilePermissions": "-rwxrwxrwx",
+    "FileModifyDate": "2025:02:11 21:41:00+00:00",
+    "FileAccessDate": "2025:02:11 21:41:25+00:00",
+    "FileInodeChangeDate": "2025:02:11 22:39:15+00:00",
+    "FilePermissions": "-rw-rw-r--",
     "FileType": "JPEG",
     "FileTypeExtension": "jpg",
     "MIMEType": "image/jpeg",
@@ -358,5 +358,9 @@
     "LightValue": -1.4,
     "LensID": "AF-S Nikkor 24mm f/1.4G ED"
   },
-  "ZBarTool": {}
+  "ZBarTool": {
+    "error": "Command failed: zbarimg --xml /app/dist/temp_image.jpg\n",
+    "barcodes": [],
+    "count": 0
+  }
 }

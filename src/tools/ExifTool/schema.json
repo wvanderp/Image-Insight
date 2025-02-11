@@ -5,8 +5,24 @@
             "additionalProperties": false,
             "description": "Root object containing all EXIF metadata",
             "properties": {
+                "ApertureValue": {
+                    "description": "Aperture value",
+                    "type": "number"
+                },
                 "Artist": {
                     "description": "Name of the image creator",
+                    "type": "string"
+                },
+                "FocalPlaneYResolution": {
+                    "description": "Focal plane Y resolution",
+                    "type": "number"
+                },
+                "BrightnessValue": {
+                    "description": "Brightness value",
+                    "type": "number"
+                },
+                "ColorSpace": {
+                    "description": "Color space",
                     "type": "string"
                 },
                 "Copyright": {
@@ -29,17 +45,45 @@
                     "description": "Byte order of the EXIF data",
                     "type": "string"
                 },
+                "ExifImageHeight": {
+                    "description": "Height of the image in pixels",
+                    "type": "number"
+                },
+                "ExifImageWidth": {
+                    "description": "Width of the image in pixels",
+                    "type": "number"
+                },
                 "ExifToolVersion": {
                     "description": "Version of ExifTool used to extract the metadata",
                     "type": "string"
+                },
+                "ExifVersion": {
+                    "description": "EXIF version",
+                    "type": "string"
+                },
+                "ExposureBiasValue": {
+                    "description": "Exposure bias value",
+                    "type": "number"
+                },
+                "ExposureCompensation": {
+                    "description": "Exposure compensation value",
+                    "type": "number"
                 },
                 "ExposureProgram": {
                     "description": "Exposure program used",
                     "type": "string"
                 },
+                "FocalPlaneXResolution": {
+                    "description": "Focal plane X resolution",
+                    "type": "number"
+                },
                 "ExposureTime": {
                     "description": "Exposure time (e.g., '1/10')",
                     "type": "string"
+                },
+                "FNumber": {
+                    "description": "F-number (aperture)",
+                    "type": "number"
                 },
                 "FileAccessDate": {
                     "description": "Date the file was last accessed",
@@ -73,13 +117,17 @@
                     "description": "File extension (e.g., 'jpg')",
                     "type": "string"
                 },
-                "FNumber": {
-                    "description": "F-number (aperture)",
-                    "type": "number"
+                "Flash": {
+                    "description": "Flash status",
+                    "type": "string"
                 },
                 "FocalLength": {
                     "description": "Focal length of the lens",
                     "type": "string"
+                },
+                "ISO": {
+                    "description": "ISO speed rating",
+                    "type": "number"
                 },
                 "ImageHeight": {
                     "description": "Height of the image in pixels",
@@ -93,24 +141,32 @@
                     "description": "Width of the image in pixels",
                     "type": "number"
                 },
-                "ISO": {
-                    "description": "ISO speed rating",
-                    "type": "number"
-                },
                 "LensModel": {
                     "description": "Model of the lens used",
+                    "type": "string"
+                },
+                "LightSource": {
+                    "description": "Light source",
+                    "type": "string"
+                },
+                "MIMEType": {
+                    "description": "MIME type of the file",
                     "type": "string"
                 },
                 "Make": {
                     "description": "Camera manufacturer",
                     "type": "string"
                 },
+                "MaxApertureValue": {
+                    "description": "Maximum aperture value",
+                    "type": "number"
+                },
                 "Megapixels": {
                     "description": "Size of the image in megapixels",
                     "type": "number"
                 },
-                "MIMEType": {
-                    "description": "MIME type of the file",
+                "MeteringMode": {
+                    "description": "Metering mode used",
                     "type": "string"
                 },
                 "Model": {
@@ -125,6 +181,30 @@
                     "description": "Orientation of the image",
                     "type": "number"
                 },
+                "ProfileCMMType": {
+                    "description": "Type of color management module",
+                    "type": "string"
+                },
+                "ProfileConnectionSpace": {
+                    "description": "Connection space of the color profile",
+                    "type": "string"
+                },
+                "ProfileDateTime": {
+                    "description": "Date and time the profile was created",
+                    "type": "string"
+                },
+                "ProfileFileSignature": {
+                    "description": "File signature of the color profile",
+                    "type": "string"
+                },
+                "ProfileVersion": {
+                    "description": "Version of the color profile",
+                    "type": "string"
+                },
+                "RecommendedExposureIndex": {
+                    "description": "Recommended exposure index",
+                    "type": "number"
+                },
                 "ResolutionUnit": {
                     "description": "Unit of resolution",
                     "type": "number"
@@ -133,12 +213,56 @@
                     "description": "Type of sensitivity",
                     "type": "number"
                 },
+                "ShutterSpeedValue": {
+                    "description": "Shutter speed value",
+                    "type": "number"
+                },
                 "Software": {
                     "description": "Software used to process the image",
                     "type": "string"
                 },
                 "SourceFile": {
                     "description": "Path to the source image file",
+                    "type": "string"
+                },
+                "SubSecTime": {
+                    "description": "Fractional seconds",
+                    "type": "string"
+                },
+                "SubSecTimeDigitized": {
+                    "description": "Fractional seconds of the digitized date and time",
+                    "type": "string"
+                },
+                "SubSecTimeOriginal": {
+                    "description": "Fractional seconds of the original date and time",
+                    "type": "string"
+                },
+                "UprightCenterMode": {
+                    "description": "Center mode of the upright transformation",
+                    "type": "string"
+                },
+                "UprightFocalLength35mm": {
+                    "description": "Focal length in 35mm format",
+                    "type": "number"
+                },
+                "UprightFocalMode": {
+                    "description": "Focal mode of the upright transformation",
+                    "type": "string"
+                },
+                "UprightPreview": {
+                    "description": "Preview of the upright transformation",
+                    "type": "string"
+                },
+                "UprightTransformCount": {
+                    "description": "Number of upright transformations",
+                    "type": "number"
+                },
+                "UprightVersion": {
+                    "description": "Version of the upright transformation",
+                    "type": "string"
+                },
+                "UserComment": {
+                    "description": "User comment",
                     "type": "string"
                 },
                 "XResolution": {
@@ -154,15 +278,6 @@
                     "type": "number"
                 }
             },
-            "required": [
-                "FileName",
-                "FileType",
-                "MIMEType",
-                "ImageWidth",
-                "ImageHeight",
-                "ImageSize",
-                "Megapixels"
-            ],
             "type": "object"
         }
     },

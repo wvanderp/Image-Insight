@@ -15,14 +15,14 @@ function loadSchema(toolName: string) {
     return schema;
 }
 
-function removeFileInodeChangeDate(obj: any): any {
+function removeProps<T>(obj: T, keys: string[]): T {
     if (typeof obj !== 'object' || obj === null) return obj;
 
-    const newObj: Record<string, any> = Array.isArray(obj) ? [] : {};
+    const newObj: any = Array.isArray(obj) ? [] : {};
     for (const key in obj) {
-        if (key !== 'FileInodeChangeDate') {
+        if (!keys.includes(key)) {
             if (typeof obj[key] === 'object') {
-                newObj[key] = removeFileInodeChangeDate(obj[key]);
+                newObj[key] = removeProps(obj[key], keys);
             } else {
                 newObj[key] = obj[key];
             }
@@ -59,12 +59,16 @@ describe('Image Inspector', () => {
 
                 it(`should match the expected output for ${image}`, { timeout: 30000 }, async () => {
                     await new Promise<void>((resolve, reject) => {
-                        exec(`docker run --rm -v ${path.dirname(imagePath)}:/images/ image-insight ${image}`, (error: any, stdout: any, stderr: any) => {
+                        const dockerCommand = `docker run --rm -v ${path.dirname(imagePath)}:/images/ image-insight ${image}`;
+
+                        exec(dockerCommand, (error: any, stdout: any, stderr: any) => {
                             if (error) {
+                                console.log(error);
                                 reject(new Error(`Docker run failed: ${error.message}`));
                                 return;
                             }
                             if (stderr) {
+                                console.log(stderr);
                                 reject(new Error(`Docker run stderr: ${stderr}`));
                                 return;
                             }
@@ -72,11 +76,12 @@ describe('Image Inspector', () => {
                             const output = JSON.parse(stdout);
                             const expectedOutput = JSON.parse(fs.readFileSync(expectedOutputPath, 'utf-8'));
 
-                            fs.writeFileSync(expectedOutputPath, JSON.stringify(expectedOutput, null, 2));
 
                             // Remove FileInodeChangeDate from both objects before comparison
-                            const cleanOutput = removeFileInodeChangeDate(output);
-                            const cleanExpectedOutput = removeFileInodeChangeDate(expectedOutput);
+                            const cleanOutput = removeProps(output, ['FileInodeChangeDate']);
+                            const cleanExpectedOutput = removeProps(expectedOutput, ['FileInodeChangeDate']);
+
+                            // fs.writeFileSync(expectedOutputPath, JSON.stringify(output, null, 2));
 
                             expect(cleanOutput).toEqual(cleanExpectedOutput);
                             resolve();
