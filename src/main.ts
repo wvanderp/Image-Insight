@@ -20,7 +20,11 @@ async function main(imagePath: string) {
             try {
                 results[tool.constructor.name] = await tool.runTool(tempImagePath);
             } catch (error) {
-                results[tool.constructor.name] = { error: error.message };
+                if (error instanceof Error) {
+                    results[tool.constructor.name] = { error: error.message };
+                } else {
+                    results[tool.constructor.name] = { error: String(error) };
+                }
             }
         }
     };

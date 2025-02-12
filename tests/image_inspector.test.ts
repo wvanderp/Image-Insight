@@ -78,8 +78,8 @@ describe('Image Inspector', () => {
 
 
                             // Remove FileInodeChangeDate from both objects before comparison
-                            const cleanOutput = removeProps(output, ['FileInodeChangeDate']);
-                            const cleanExpectedOutput = removeProps(expectedOutput, ['FileInodeChangeDate']);
+                            const cleanOutput = removeProps(output, ['FileInodeChangeDate', 'FileAccessDate', 'FilePermissions', 'FileModifyDate']);
+                            const cleanExpectedOutput = removeProps(expectedOutput, ['FileInodeChangeDate', 'FileAccessDate', 'FilePermissions', 'FileModifyDate']);
 
                             // fs.writeFileSync(expectedOutputPath, JSON.stringify(output, null, 2));
 

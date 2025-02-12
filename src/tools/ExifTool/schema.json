@@ -9,20 +9,96 @@
                     "description": "Aperture value",
                     "type": "number"
                 },
+                "ApplicationRecordVersion": {
+                    "description": "Application record version",
+                    "type": "number"
+                },
+                "ApproximateFocusDistance": {
+                    "description": "Approximate focus distance",
+                    "type": "number"
+                },
                 "Artist": {
                     "description": "Name of the image creator",
                     "type": "string"
                 },
-                "FocalPlaneYResolution": {
-                    "description": "Focal plane Y resolution",
+                "AutoLateralCA": {
+                    "description": "Auto lateral chromatic aberration",
+                    "type": "number"
+                },
+                "AutoWhiteVersion": {
+                    "description": "Auto white version",
+                    "type": "string"
+                },
+                "Blacks2012": {
+                    "description": "Blacks 2012",
+                    "type": "number"
+                },
+                "BlueHue": {
+                    "description": "Blue hue",
+                    "type": "number"
+                },
+                "BlueSaturation": {
+                    "description": "Blue saturation",
                     "type": "number"
                 },
                 "BrightnessValue": {
                     "description": "Brightness value",
                     "type": "number"
                 },
+                "CameraProfile": {
+                    "description": "Camera profile",
+                    "type": "string"
+                },
+                "CFAPattern": {
+                    "description": "Color filter array pattern",
+                    "type": "string"
+                },
+                "Clarity2012": {
+                    "description": "Clarity 2012",
+                    "type": "number"
+                },
+                "CodedCharacterSet": {
+                    "description": "Coded character set",
+                    "type": "string"
+                },
+                "ColorMode": {
+                    "description": "Color mode",
+                    "type": "string"
+                },
+                "ColorNoiseReduction": {
+                    "description": "Color noise reduction",
+                    "type": "number"
+                },
+                "ColorNoiseReductionDetail": {
+                    "description": "Color noise reduction detail",
+                    "type": "number"
+                },
+                "ColorNoiseReductionSmoothness": {
+                    "description": "Color noise reduction smoothness",
+                    "type": "number"
+                },
                 "ColorSpace": {
                     "description": "Color space",
+                    "type": "string"
+                },
+                "ColorTemperature": {
+                    "description": "Color temperature",
+                    "type": "number"
+                },
+                "Compression": {
+                    "description": "Compression scheme",
+                    "type": "string"
+                },
+                "Contrast": {
+                    "description": "Contrast",
+                    "type": "string"
+                },
+                "Contrast2012": {
+                    "description": "Contrast 2012",
+                    "type": "number"
+                },
+                "ConvertToGrayscale": {
+                    "description": "Convert to grayscale",
                     "type": "string"
                 },
                 "Copyright": {
@@ -33,12 +109,68 @@
                     "description": "Date and time when the image was created",
                     "type": "string"
                 },
+                "CreatorTool": {
+                    "description": "Tool used to create the image",
+                    "type": "string"
+                },
+                "CurrentIPTCDigest": {
+                    "description": "Current IPTC digest",
+                    "type": "string"
+                },
+                "CustomRendered": {
+                    "description": "Custom image processing",
+                    "type": "string"
+                },
+                "DateCreated": {
+                    "description": "Date the image was created",
+                    "type": "string"
+                },
                 "DateTimeOriginal": {
                     "description": "Original date and time when the image was taken",
                     "type": "string"
                 },
+                "DefringeGreenAmount": {
+                    "description": "Green defringe amount",
+                    "type": "number"
+                },
+                "DefringeGreenHueHi": {
+                    "description": "Green defringe hue high",
+                    "type": "number"
+                },
+                "DefringeGreenHueLo": {
+                    "description": "Green defringe hue low",
+                    "type": "number"
+                },
+                "DefringePurpleAmount": {
+                    "description": "Purple defringe amount",
+                    "type": "number"
+                },
+                "DefringePurpleHueHi": {
+                    "description": "Purple defringe hue high",
+                    "type": "number"
+                },
+                "DefringePurpleHueLo": {
+                    "description": "Purple defringe hue low",
+                    "type": "number"
+                },
+                "Dehaze": {
+                    "description": "Dehaze",
+                    "type": "number"
+                },
                 "Directory": {
                     "description": "Directory containing the image file",
+                    "type": "string"
+                },
+                "DisplayedUnitsX": {
+                    "description": "Displayed units for X resolution",
+                    "type": "number"
+                },
+                "DisplayedUnitsY": {
+                    "description": "Displayed units for Y resolution",
+                    "type": "number"
+                },
+                "DocumentID": {
+                    "description": "Document ID",
                     "type": "string"
                 },
                 "ExifByteOrder": {
@@ -61,6 +193,10 @@
                     "description": "EXIF version",
                     "type": "string"
                 },
+                "Exposure2012": {
+                    "description": "Exposure 2012",
+                    "type": "number"
+                },
                 "ExposureBiasValue": {
                     "description": "Exposure bias value",
                     "type": "number"
@@ -69,21 +205,17 @@
                     "description": "Exposure compensation value",
                     "type": "number"
                 },
+                "ExposureMode": {
+                    "description": "Exposure mode",
+                    "type": "string"
+                },
                 "ExposureProgram": {
                     "description": "Exposure program used",
                     "type": "string"
                 },
-                "FocalPlaneXResolution": {
-                    "description": "Focal plane X resolution",
-                    "type": "number"
-                },
                 "ExposureTime": {
                     "description": "Exposure time (e.g., '1/10')",
                     "type": "string"
-                },
-                "FNumber": {
-                    "description": "F-number (aperture)",
-                    "type": "number"
                 },
                 "FileAccessDate": {
                     "description": "Date the file was last accessed",
@@ -109,6 +241,10 @@
                     "description": "Size of the file with unit (e.g., '5.0 MB')",
                     "type": "string"
                 },
+                "FileSource": {
+                    "description": "Source of the file",
+                    "type": "string"
+                },
                 "FileType": {
                     "description": "Type of image file (e.g., 'JPEG')",
                     "type": "string"
@@ -121,16 +257,108 @@
                     "description": "Flash status",
                     "type": "string"
                 },
+                "FNumber": {
+                    "description": "F-number (aperture)",
+                    "type": "number"
+                },
                 "FocalLength": {
                     "description": "Focal length of the lens",
                     "type": "string"
                 },
-                "ISO": {
-                    "description": "ISO speed rating",
+                "FocalLengthIn35mmFormat": {
+                    "description": "Focal length in 35mm format",
                     "type": "number"
+                },
+                "FocalPlaneResolutionUnit": {
+                    "description": "Unit of the focal plane resolution",
+                    "type": "number"
+                },
+                "FocalPlaneXResolution": {
+                    "description": "Focal plane X resolution",
+                    "type": "number"
+                },
+                "FocalPlaneYResolution": {
+                    "description": "Focal plane Y resolution",
+                    "type": "number"
+                },
+                "Format": {
+                    "description": "Format of the image file",
+                    "type": "string"
+                },
+                "GainControl": {
+                    "description": "Gain control",
+                    "type": "string"
+                },
+                "GlobalAltitude": {
+                    "description": "Global altitude",
+                    "type": "number"
+                },
+                "GlobalAngle": {
+                    "description": "Global angle",
+                    "type": "number"
+                },
+                "GrainAmount": {
+                    "description": "Grain amount",
+                    "type": "number"
+                },
+                "GreenHue": {
+                    "description": "Green hue",
+                    "type": "number"
+                },
+                "GreenSaturation": {
+                    "description": "Green saturation",
+                    "type": "number"
+                },
+                "HasRealMergedData": {
+                    "description": "Has real merged data",
+                    "type": "string"
+                },
+                "Highlights2012": {
+                    "description": "Highlights 2012",
+                    "type": "number"
+                },
+                "HueAdjustmentAqua": {
+                    "description": "Aqua hue adjustment",
+                    "type": "number"
+                },
+                "HueAdjustmentBlue": {
+                    "description": "Blue hue adjustment",
+                    "type": "number"
+                },
+                "HueAdjustmentGreen": {
+                    "description": "Green hue adjustment",
+                    "type": "number"
+                },
+                "HueAdjustmentMagenta": {
+                    "description": "Magenta hue adjustment",
+                    "type": "number"
+                },
+                "HueAdjustmentOrange": {
+                    "description": "Orange hue adjustment",
+                    "type": "number"
+                },
+                "HueAdjustmentPurple": {
+                    "description": "Purple hue adjustment",
+                    "type": "number"
+                },
+                "HueAdjustmentRed": {
+                    "description": "Red hue adjustment",
+                    "type": "number"
+                },
+                "HueAdjustmentYellow": {
+                    "description": "Yellow hue adjustment",
+                    "type": "number"
+                },
+                "ICCProfileName": {
+                    "description": "Name of the ICC profile",
+                    "type": "string"
                 },
                 "ImageHeight": {
                     "description": "Height of the image in pixels",
+                    "type": "number"
+                },
+                "ImageNumber": {
+                    "description": "Image number",
                     "type": "number"
                 },
                 "ImageSize": {
@@ -141,17 +369,77 @@
                     "description": "Width of the image in pixels",
                     "type": "number"
                 },
+                "InstanceID": {
+                    "description": "Instance ID",
+                    "type": "string"
+                },
+                "IPTCDigest": {
+                    "description": "IPTC digest",
+                    "type": "string"
+                },
+                "ISO": {
+                    "description": "ISO speed rating",
+                    "type": "number"
+                },
+                "Lens": {
+                    "description": "Lens",
+                    "type": "string"
+                },
+                "LensInfo": {
+                    "description": "Lens information",
+                    "type": "string"
+                },
+                "LensManualDistortionAmount": {
+                    "description": "Lens manual distortion amount",
+                    "type": "number"
+                },
                 "LensModel": {
                     "description": "Model of the lens used",
+                    "type": "string"
+                },
+                "LensProfileEnable": {
+                    "description": "Lens profile enable",
                     "type": "string"
                 },
                 "LightSource": {
                     "description": "Light source",
                     "type": "string"
                 },
-                "MIMEType": {
-                    "description": "MIME type of the file",
-                    "type": "string"
+                "LuminanceAdjustmentAqua": {
+                    "description": "Aqua luminance adjustment",
+                    "type": "number"
+                },
+                "LuminanceAdjustmentBlue": {
+                    "description": "Blue luminance adjustment",
+                    "type": "number"
+                },
+                "LuminanceAdjustmentGreen": {
+                    "description": "Green luminance adjustment",
+                    "type": "number"
+                },
+                "LuminanceAdjustmentMagenta": {
+                    "description": "Magenta luminance adjustment",
+                    "type": "number"
+                },
+                "LuminanceAdjustmentOrange": {
+                    "description": "Orange luminance adjustment",
+                    "type": "number"
+                },
+                "LuminanceAdjustmentPurple": {
+                    "description": "Purple luminance adjustment",
+                    "type": "number"
+                },
+                "LuminanceAdjustmentRed": {
+                    "description": "Red luminance adjustment",
+                    "type": "number"
+                },
+                "LuminanceAdjustmentYellow": {
+                    "description": "Yellow luminance adjustment",
+                    "type": "number"
+                },
+                "LuminanceSmoothing": {
+                    "description": "Luminance smoothing",
+                    "type": "number"
                 },
                 "Make": {
                     "description": "Camera manufacturer",
@@ -165,8 +453,16 @@
                     "description": "Size of the image in megapixels",
                     "type": "number"
                 },
+                "MetadataDate": {
+                    "description": "Date and time the metadata was last modified",
+                    "type": "string"
+                },
                 "MeteringMode": {
                     "description": "Metering mode used",
+                    "type": "string"
+                },
+                "MIMEType": {
+                    "description": "MIME type of the file",
                     "type": "string"
                 },
                 "Model": {
@@ -177,9 +473,117 @@
                     "description": "Date the file was last modified",
                     "type": "string"
                 },
+                "NumSlices": {
+                    "description": "Number of slices",
+                    "type": "number"
+                },
                 "Orientation": {
                     "description": "Orientation of the image",
                     "type": "number"
+                },
+                "OriginalDocumentID": {
+                    "description": "Original document ID",
+                    "type": "string"
+                },
+                "ParametricDarks": {
+                    "description": "Parametric darks",
+                    "type": "number"
+                },
+                "ParametricHighlights": {
+                    "description": "Parametric highlights",
+                    "type": "number"
+                },
+                "ParametricHighlightSplit": {
+                    "description": "Parametric highlight split",
+                    "type": "number"
+                },
+                "ParametricLights": {
+                    "description": "Parametric lights",
+                    "type": "number"
+                },
+                "ParametricMidtoneSplit": {
+                    "description": "Parametric midtone split",
+                    "type": "number"
+                },
+                "ParametricShadows": {
+                    "description": "Parametric shadows",
+                    "type": "number"
+                },
+                "ParametricShadowSplit": {
+                    "description": "Parametric shadow split",
+                    "type": "number"
+                },
+                "PerspectiveAspect": {
+                    "description": "Aspect ratio of the perspective",
+                    "type": "number"
+                },
+                "PerspectiveHorizontal": {
+                    "description": "Horizontal perspective",
+                    "type": "number"
+                },
+                "PerspectiveRotate": {
+                    "description": "Rotation of the perspective",
+                    "type": "number"
+                },
+                "PerspectiveScale": {
+                    "description": "Scale of the perspective",
+                    "type": "number"
+                },
+                "PerspectiveUpright": {
+                    "description": "Upright perspective",
+                    "type": "string"
+                },
+                "PerspectiveVertical": {
+                    "description": "Vertical perspective",
+                    "type": "number"
+                },
+                "PerspectiveX": {
+                    "description": "X perspective",
+                    "type": "number"
+                },
+                "PerspectiveY": {
+                    "description": "Y perspective",
+                    "type": "number"
+                },
+                "PhotoshopFormat": {
+                    "description": "Photoshop format",
+                    "type": "string"
+                },
+                "PhotoshopQuality": {
+                    "description": "Photoshop quality",
+                    "type": "number"
+                },
+                "PhotoshopThumbnail": {
+                    "description": "Photoshop thumbnail (can be extracted with the -b option)",
+                    "type": "string"
+                },
+                "PixelAspectRatio": {
+                    "description": "Pixel aspect ratio",
+                    "type": "number"
+                },
+                "PostCropVignetteAmount": {
+                    "description": "Post-crop vignette amount",
+                    "type": "number"
+                },
+                "PreservedFileName": {
+                    "description": "Preserved file name",
+                    "type": "string"
+                },
+                "PrintPosition": {
+                    "description": "Print position",
+                    "type": "string"
+                },
+                "PrintScale": {
+                    "description": "Print scale",
+                    "type": "string"
+                },
+                "PrintStyle": {
+                    "description": "Print style",
+                    "type": "string"
+                },
+                "ProcessVersion": {
+                    "description": "Process version",
+                    "type": "string"
                 },
                 "ProfileCMMType": {
                     "description": "Type of color management module",
@@ -201,21 +605,121 @@
                     "description": "Version of the color profile",
                     "type": "string"
                 },
+                "Rating": {
+                    "description": "Rating",
+                    "type": "number"
+                },
+                "RawFileName": {
+                    "description": "Name of the raw image file",
+                    "type": "string"
+                },
+                "ReaderName": {
+                    "description": "Name of the reader",
+                    "type": "string"
+                },
                 "RecommendedExposureIndex": {
                     "description": "Recommended exposure index",
+                    "type": "number"
+                },
+                "RedHue": {
+                    "description": "Red hue",
+                    "type": "number"
+                },
+                "RedSaturation": {
+                    "description": "Red saturation",
                     "type": "number"
                 },
                 "ResolutionUnit": {
                     "description": "Unit of resolution",
                     "type": "number"
                 },
+                "Saturation": {
+                    "description": "Saturation",
+                    "type": "string"
+                },
+                "SaturationAdjustmentAqua": {
+                    "description": "Aqua saturation adjustment",
+                    "type": "number"
+                },
+                "SaturationAdjustmentBlue": {
+                    "description": "Blue saturation adjustment",
+                    "type": "number"
+                },
+                "SaturationAdjustmentGreen": {
+                    "description": "Green saturation adjustment",
+                    "type": "number"
+                },
+                "SaturationAdjustmentMagenta": {
+                    "description": "Magenta saturation adjustment",
+                    "type": "number"
+                },
+                "SaturationAdjustmentOrange": {
+                    "description": "Orange saturation adjustment",
+                    "type": "number"
+                },
+                "SaturationAdjustmentPurple": {
+                    "description": "Purple saturation adjustment",
+                    "type": "number"
+                },
+                "SaturationAdjustmentRed": {
+                    "description": "Red saturation adjustment",
+                    "type": "number"
+                },
+                "SaturationAdjustmentYellow": {
+                    "description": "Yellow saturation adjustment",
+                    "type": "number"
+                },
+                "SceneCaptureType": {
+                    "description": "Scene capture type",
+                    "type": "string"
+                },
+                "SceneType": {
+                    "description": "Scene type",
+                    "type": "string"
+                },
+                "SensingMethod": {
+                    "description": "Sensing method",
+                    "type": "string"
+                },
                 "SensitivityType": {
                     "description": "Type of sensitivity",
                     "type": "number"
                 },
+                "SerialNumber": {
+                    "description": "Serial number of the camera",
+                    "type": "string"
+                },
+                "Shadows2012": {
+                    "description": "Shadows 2012",
+                    "type": "number"
+                },
+                "ShadowTint": {
+                    "description": "Shadow tint",
+                    "type": "number"
+                },
+                "SharpenDetail": {
+                    "description": "Sharpen detail",
+                    "type": "number"
+                },
+                "SharpenEdgeMasking": {
+                    "description": "Sharpen edge masking",
+                    "type": "number"
+                },
+                "SharpenRadius": {
+                    "description": "Sharpen radius",
+                    "type": "number"
+                },
+                "Sharpness": {
+                    "description": "Sharpness",
+                    "type": "string"
+                },
                 "ShutterSpeedValue": {
                     "description": "Shutter speed value",
                     "type": "number"
+                },
+                "SlicesGroupName": {
+                    "description": "Slices group name",
+                    "type": "string"
                 },
                 "Software": {
                     "description": "Software used to process the image",
@@ -223,6 +727,30 @@
                 },
                 "SourceFile": {
                     "description": "Path to the source image file",
+                    "type": "string"
+                },
+                "SplitToningBalance": {
+                    "description": "Balance of the split toning",
+                    "type": "number"
+                },
+                "SplitToningHighlightHue": {
+                    "description": "Highlight hue of the split toning",
+                    "type": "number"
+                },
+                "SplitToningHighlightSaturation": {
+                    "description": "Highlight saturation of the split toning",
+                    "type": "number"
+                },
+                "SplitToningShadowHue": {
+                    "description": "Shadow hue of the split toning",
+                    "type": "number"
+                },
+                "SplitToningShadowSaturation": {
+                    "description": "Shadow saturation of the split toning",
+                    "type": "number"
+                },
+                "SubjectDistanceRange": {
+                    "description": "Subject distance range",
                     "type": "string"
                 },
                 "SubSecTime": {
@@ -236,6 +764,34 @@
                 "SubSecTimeOriginal": {
                     "description": "Fractional seconds of the original date and time",
                     "type": "string"
+                },
+                "ThumbnailLength": {
+                    "description": "Length of the thumbnail in bytes",
+                    "type": "number"
+                },
+                "ThumbnailOffset": {
+                    "description": "Offset of the thumbnail in the file",
+                    "type": "number"
+                },
+                "TimeCreated": {
+                    "description": "Time the image was created",
+                    "type": "string"
+                },
+                "Tint": {
+                    "description": "Tint",
+                    "type": "number"
+                },
+                "ToneCurveName": {
+                    "description": "Name of the tone curve",
+                    "type": "string"
+                },
+                "ToneCurveName2012": {
+                    "description": "Name of the tone curve 2012",
+                    "type": "string"
+                },
+                "ToneMapStrength": {
+                    "description": "Tone map strength",
+                    "type": "number"
                 },
                 "UprightCenterMode": {
                     "description": "Center mode of the upright transformation",
@@ -261,8 +817,40 @@
                     "description": "Version of the upright transformation",
                     "type": "string"
                 },
+                "URL_List": {
+                    "description": "List of URLs",
+                    "type": "string"
+                },
                 "UserComment": {
                     "description": "User comment",
+                    "type": "string"
+                },
+                "Version": {
+                    "description": "Version of the metadata",
+                    "type": "number"
+                },
+                "Vibrance": {
+                    "description": "Vibrance",
+                    "type": "number"
+                },
+                "VignetteAmount": {
+                    "description": "Vignette amount",
+                    "type": "number"
+                },
+                "WhiteBalance": {
+                    "description": "White balance mode",
+                    "type": "string"
+                },
+                "Whites2012": {
+                    "description": "Whites 2012",
+                    "type": "number"
+                },
+                "WriterName": {
+                    "description": "Name of the writer",
+                    "type": "string"
+                },
+                "XMPToolkit": {
+                    "description": "XMP toolkit",
                     "type": "string"
                 },
                 "XResolution": {
