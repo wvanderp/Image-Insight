@@ -4,7 +4,7 @@ A Docker-based tool that performs comprehensive analysis of images, extracting m
 
 ## Overview
 
-This tool analyze images by examining both:
+This tool analyzes images by examining both:
 
 - File metadata (EXIF data, file format, dimensions, etc.)
 - Image contents (objects, faces, text, colors, etc.)
@@ -24,8 +24,8 @@ This tool analyze images by examining both:
 ### Using Docker
 
 ```bash
-docker pull [image-name]
-docker run -v /path/to/images:/images [image-name] photo.jpg
+docker pull image-insight
+docker run -v /path/to/images:/images image-insight photo.jpg
 ```
 
 ### Output

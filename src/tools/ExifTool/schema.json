@@ -864,6 +864,10 @@
                 "YResolution": {
                     "description": "Vertical resolution in DPI",
                     "type": "number"
+                },
+                "CameraProfileDigest": {
+                    "description": "Camera profile digest",
+                    "type": "string"
                 }
             },
             "type": "object"

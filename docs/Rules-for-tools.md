@@ -109,25 +109,6 @@ Create a JSON schema file for your tool's output:
 }
 ```
 
-## Testing
-
-You need to provide sample images and the expected output.
-
-All test images should have an appropriate license. If you do not have the right to use the image, you should not include it in the repository.
-The licensence, source and attribution of the images should be included in a text file with the same name as the image next to the image.
-
-### Example
-
-Include a `tests` directory with sample images and a JSON file with expected outputs:
-
-```
-tests/
-  sample1.jpg
-  sample1_expected_output.json
-  sample2.png
-  sample2_expected_output.json
-```
-
 ## Documentation
 
 You need to provide a README.md file with the following information:
@@ -162,12 +143,7 @@ tool_name/
   ├── index.ts
   ├── README.md
   ├── your_tool.py
-  ├── schema.json
-  └── tests/
-      ├── sample1.jpg
-      ├── sample1_expected_output.json
-      ├── sample2.png
-      └── sample2_expected_output.json
+  └── schema.json
 ```
 
-The name of the tool folder should be the name of the tool. it should exactly match the name in the Class of the tool.
+The name of the tool folder should be the name of the tool. It should exactly match the name in the Class of the tool.

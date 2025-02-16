@@ -5,7 +5,7 @@
   "main": "dist/main.js",
   "scripts": {
     "build-docker": "docker build -t image-insight .",
-    "run": "npm run build-docker && docker run --rm -v /home/walter/code/Image-Insight/src/tools/ZBarTool/tests/:/images/ image-insight QR_code_for_mobile_English_Wikipedia.svg.png",
+    "run": "npm run build-docker && docker run --rm -v C:\\Users\\woute\\Code\\Image-Insight:/images/ image-insight Zendaya.jpg",
     "test": "npm run build-docker && vitest run"
   },
   "author": "",

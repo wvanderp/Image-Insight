@@ -11,6 +11,9 @@
         },
         {
             "file": "docs/Rules-for-tools.md"
+        },
+        {
+            "file": "docs/Copilot.md"
         }
     ]
 }

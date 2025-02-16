@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "RetinaFaceTool": {
+            "type": "object",
+            "properties": {
+                "faces": {
+                    "type": "array",
+                    "description": "Array of detected faces in the image",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "facial_area": {
+                                "type": "array",
+                                "description": "Coordinates of the facial area",
+                                "items": {
+                                    "type": "integer"
+                                }
+                            },
+                            "landmarks": {
+                                "type": "object",
+                                "description": "Facial landmarks",
+                                "properties": {
+                                    "right_eye": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "left_eye": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "nose": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "mouth_right": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "mouth_left": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "count": {
+                    "type": "integer",
+                    "description": "Total number of faces detected in the image",
+                    "minimum": 0
+                }
+            },
+            "required": [
+                "faces",
+                "count"
+            ]
+        }
+    },
+    "required": [
+        "RetinaFaceTool"
+    ]
+}
